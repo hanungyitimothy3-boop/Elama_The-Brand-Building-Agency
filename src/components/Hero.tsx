@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px] animate-float" />
       <div className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-primary/15 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
 
-      <div ref={ref} className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="inline-block mb-6 px-4 py-1.5 rounded-full glass text-xs text-muted-foreground tracking-widest uppercase">
           Brand Building Agency
         </div>
@@ -27,7 +27,8 @@ const Hero = () => {
         </h3>
 
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
-          Elämä crafts premium brand identities, social media presence, and product packaging for startups and visionary founders.
+          At Elämä we don't just design brand identity or social media flyers or some logos.
+          Every design we give you is to help communicate your vision clearly.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
