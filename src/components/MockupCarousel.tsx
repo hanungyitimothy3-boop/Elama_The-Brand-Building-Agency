@@ -8,6 +8,10 @@ const slides = [
   { image: mockupLaptop, label: "Website & Brand" },
   { image: mockupPhone, label: "Mobile Experience" },
   { image: mockupPackaging, label: "Product Packaging" },
+  { image: mockupPackaging, label: "Product Packaging" },
+  { image: mockupPackaging, label: "Product Packaging" },
+  { image: mockupPackaging, label: "Product Packaging" },
+  { image: mockupPackaging, label: "Product Packaging" },
 ];
 
 const MockupCarousel = () => {
@@ -26,7 +30,7 @@ const MockupCarousel = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-primary text-sm tracking-widest uppercase mb-3 font-medium">Showcase</p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold">Device Mockups</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold">Mockups</h2>
         </div>
 
         <div className="relative">

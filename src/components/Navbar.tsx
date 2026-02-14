@@ -6,7 +6,7 @@ const navItems = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  // { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
