@@ -45,7 +45,7 @@ const Navbar = () => {
             href="#contact"
             className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-all duration-300 glow-accent-sm"
           >
-            Get in Touch
+            Book A Session Today
           </a>
         </div>
 
