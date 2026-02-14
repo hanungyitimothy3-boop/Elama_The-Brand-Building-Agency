@@ -1,18 +1,43 @@
 import { useState, FormEvent } from "react";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string).trim();
+    const email = (formData.get("email") as string).trim();
+    const service = (formData.get("service") as string).trim();
+    const message = (formData.get("message") as string).trim();
+
+    if (!name || !email || !service || !message) {
+      toast.error("Please fill in all fields.");
       setSending(false);
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: { name, email, service, message },
+      });
+
+      if (error) throw error;
+
       toast.success("Message sent! We'll be in touch soon.");
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -32,7 +57,9 @@ const Contact = () => {
               <label className="block text-sm text-muted-foreground mb-2">Name</label>
               <input
                 type="text"
+                name="name"
                 required
+                maxLength={100}
                 placeholder="Your name"
                 className="w-full px-4 py-3 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all"
               />
@@ -41,7 +68,9 @@ const Contact = () => {
               <label className="block text-sm text-muted-foreground mb-2">Email</label>
               <input
                 type="email"
+                name="email"
                 required
+                maxLength={255}
                 placeholder="you@company.com"
                 className="w-full px-4 py-3 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all"
               />
@@ -51,6 +80,7 @@ const Contact = () => {
           <div>
             <label className="block text-sm text-muted-foreground mb-2">Service</label>
             <select
+              name="service"
               required
               className="w-full px-4 py-3 rounded-xl bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all"
             >
@@ -65,8 +95,10 @@ const Contact = () => {
           <div>
             <label className="block text-sm text-muted-foreground mb-2">Message</label>
             <textarea
+              name="message"
               required
               rows={5}
+              maxLength={1000}
               placeholder="Tell us about your project..."
               className="w-full px-4 py-3 rounded-xl bg-secondary border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none"
             />
