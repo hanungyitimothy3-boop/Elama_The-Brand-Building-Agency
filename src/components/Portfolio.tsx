@@ -1,6 +1,6 @@
-import portfolioBrand from "@/assets/portfolio-brand.jpg";
-import portfolioSocial from "@/assets/portfolio-social.jpg";
-import portfolioPackaging from "@/assets/portfolio-packaging.jpg";
+import portfolioBrand from "@/assets/images/Moodboard1.jpg";
+import portfolioSocial from "@/assets/images/Mock-up .jpg";
+import portfolioPackaging from "@/assets/images/Timothy_Hanungyi_MAU_CONCES_logo_mockup.jpg";
 
 const projects = [
   { image: portfolioBrand, title: "Brand Identity", subtitle: "Visual Systems & Logo Design" },
