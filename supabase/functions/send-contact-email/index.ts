@@ -63,11 +63,12 @@ Deno.serve(async (req) => {
     }
 
     try {
+      const port = parseInt(smtpPort || "587");
       const client = new SMTPClient({
         connection: {
           hostname: smtpHost,
-          port: parseInt(smtpPort || "587"),
-          tls: true,
+          port,
+          tls: port === 465,
           auth: { username: smtpUser, password: smtpPass },
         },
       });
