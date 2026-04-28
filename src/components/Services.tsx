@@ -1,4 +1,4 @@
-import { Palette, Share2, Package } from "lucide-react";
+import { Palette, Share2, Package, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const services = [
@@ -16,6 +16,11 @@ const services = [
     icon: Package,
     title: "Product Packaging",
     description: "Shelf-ready packaging design that communicates quality, drives purchase decisions, and elevates your product experience.",
+  },
+  {
+    icon: Sparkles,
+    title: "Event Branding",
+    description: "Immersive event identities—from invites to signage—that create memorable experiences and amplify your brand presence.",
   },
 ];
 
@@ -47,7 +52,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-heading font-bold">Our Services</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <div
               key={s.title}
