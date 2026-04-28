@@ -10,6 +10,12 @@ import packaging3 from "@/assets/portfolio/packaging-3.jpg";
 import event1 from "@/assets/portfolio/event-1.jpg";
 import event2 from "@/assets/portfolio/event-2.jpg";
 import event3 from "@/assets/portfolio/event-3.jpg";
+import print1 from "@/assets/portfolio/print-1.jpg";
+import print2 from "@/assets/portfolio/print-2.jpg";
+import print3 from "@/assets/portfolio/print-3.jpg";
+import document1 from "@/assets/portfolio/document-1.jpg";
+import document2 from "@/assets/portfolio/document-2.jpg";
+import document3 from "@/assets/portfolio/document-3.jpg";
 
 const categories = [
   {
@@ -31,6 +37,16 @@ const categories = [
     title: "Event Branding",
     subtitle: "Immersive Event Identities",
     images: [event1, event2, event3],
+  },
+  {
+    title: "Print Design",
+    subtitle: "Collateral & Stationery",
+    images: [print1, print2, print3],
+  },
+  {
+    title: "Document Design",
+    subtitle: "PDFs, Books, Brochures & Magazines",
+    images: [document1, document2, document3],
   },
 ];
 
