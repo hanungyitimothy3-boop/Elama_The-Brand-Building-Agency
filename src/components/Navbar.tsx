@@ -27,8 +27,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" className="flex items-center">
-          <img src={logo} alt="Elämä — The Brand Building Agency" className="h-10 md:h-12 w-auto" />
+        <a href="#" className="flex items-center -my-6">
+          <img src={logo} alt="Elämä — The Brand Building Agency" className="h-20 md:h-24 w-auto" />
         </a>
 
         {/* Desktop */}
