@@ -1,63 +1,81 @@
-import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
-import { services } from "@/lib/services";
+import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+
+const socials = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/elama.official/",
+    icon: Instagram,
+    external: true,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61586258460442",
+    icon: Facebook,
+    external: true,
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/Elama_Official",
+    icon: XIcon,
+    external: true,
+  },
+  {
+    label: "Email",
+    href: "mailto:elamathebrandbuildingagency@gmail.com",
+    icon: Mail,
+    external: false,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/2349161110274",
+    icon: Phone,
+    external: true,
+  },
+];
+
+function XIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
-            <img src={logo} alt="Elämä — The Brand Building Agency" className="h-12 w-auto mb-4" />
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
-              Premium brand building agency crafting identities that inspire, engage, and convert for startups and visionary founders.
-            </p>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Mail size={14} className="text-primary" />
-                <a href="mailto:hello@elama.agency" className="hover:text-foreground transition-colors">hello@elama.agency</a>
+    <footer className="border-t border-border/40 mt-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 flex flex-col items-center gap-8">
+        <nav aria-label="Contact and social links">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-10">
+            {socials.map(({ label, href, icon: Icon, external }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  aria-label={label}
+                  title={label}
+                  {...(external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="inline-flex items-center justify-center w-11 h-11 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95"
+                >
+                  <Icon size={20} />
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone size={14} className="text-primary" />
-                <span>+1 (555) 010-2026</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin size={14} className="text-primary" />
-                <span>Remote · Worldwide</span>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
+        </nav>
 
-          <div>
-            <h4 className="font-heading font-semibold text-sm mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {services.map((s) => (
-                <li key={s.title}>
-                  <Link to="/services" className="hover:text-foreground transition-colors">{s.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-heading font-semibold text-sm mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
-              <li><Link to="/portfolio" className="hover:text-foreground transition-colors">Portfolio</Link></li>
-              <li><Link to="/services" className="hover:text-foreground transition-colors">Services</Link></li>
-              <li><Link to="/book" className="hover:text-foreground transition-colors">Book a Session</Link></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">© 2026 Elämä. All rights reserved.</p>
-          <div className="flex gap-6 text-xs text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-          </div>
-        </div>
+        <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
+          © 2026 Elämä — Crafted with intention
+        </p>
       </div>
     </footer>
   );
