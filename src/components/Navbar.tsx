@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -26,8 +27,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" className="text-2xl font-heading font-bold tracking-tight">
-          <span className="gradient-text">Elämä</span>
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Elämä — The Brand Building Agency" className="h-10 md:h-12 w-auto" />
         </a>
 
         {/* Desktop */}

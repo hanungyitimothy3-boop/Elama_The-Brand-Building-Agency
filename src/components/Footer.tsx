@@ -1,10 +1,12 @@
+import logo from "@/assets/logo.png";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-heading font-bold gradient-text mb-4">Elämä</h3>
+            <img src={logo} alt="Elämä — The Brand Building Agency" className="h-12 w-auto mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
               Premium brand building agency crafting identities that inspire, engage, and convert for startups and visionary founders.
             </p>
