@@ -20,7 +20,7 @@ const Hero = () => {
           An Expert Branding Agency
         </div>
 
-        <h3 className="text-3xl sm:text-6xl font-bold leading-[0.95] tracking-tight mb-8 font-sans md:text-7xl lg:text-8xl">
+        <h3 className="text-3xl sm:text-6xl font-bold leading-[0.95] tracking-tight mb-8 font-sans md:text-7xl lg:text-7xl">
           Building Brands with 
           <br />
           <span className="gradient-text font-sans text-9xl">Timeless market relevance.</span>
