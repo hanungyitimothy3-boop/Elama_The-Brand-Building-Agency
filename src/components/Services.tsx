@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { services } from "@/lib/services";
 
 const Services = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,19 +24,7 @@ const Services = () => {
   }, []);
 
   const handleSelect = (title: string) => {
-    const contact = document.getElementById("contact");
-    contact?.scrollIntoView({ behavior: "smooth" });
-    // Defer so the section is mounted/visible, then set the select value
-    setTimeout(() => {
-      const select = document.querySelector<HTMLSelectElement>(
-        '#contact select[name="service"]'
-      );
-      if (select) {
-        select.value = title;
-        select.dispatchEvent(new Event("change", { bubbles: true }));
-        select.focus({ preventScroll: true });
-      }
-    }, 500);
+    navigate(`/book?service=${encodeURIComponent(title)}`);
   };
 
   return (
