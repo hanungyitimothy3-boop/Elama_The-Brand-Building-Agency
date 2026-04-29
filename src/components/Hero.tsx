@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,19 +32,19 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#contact"
+          <Link
+            to="/book"
             className="group px-8 py-4 rounded-xl bg-primary text-primary-foreground font-medium text-base flex items-center gap-2 transition-all duration-300 hover:gap-3 animate-pulse-glow"
           >
             Start Your Project
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-          </a>
-          <a
-            href="#portfolio"
+          </Link>
+          <Link
+            to="/portfolio"
             className="px-8 py-4 rounded-xl glass text-foreground font-medium text-base transition-all duration-300 hover:bg-card/80"
           >
             View Our Work
-          </a>
+          </Link>
         </div>
       </div>
 
