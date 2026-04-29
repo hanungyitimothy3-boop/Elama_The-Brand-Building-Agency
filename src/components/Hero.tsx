@@ -23,12 +23,11 @@ const Hero = () => {
         <h3 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold leading-[0.95] tracking-tight mb-8">
           Building Brands with 
           <br />
-          <span className="gradient-text">Timeless market relevance.</span>
+          <span className="gradient-text font-sans">Timeless market relevance.</span>
         </h3>
 
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
-          At Elämä we don't just design brand identity or social media flyers or some logos.
-          Every design we give you is to help communicate your vision clearly.
+          At Elämä, design isn’t just about visuals—it’s about communication. Every brand identity, logo, or social media piece we create is built to express your vision clearly and effectively.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
