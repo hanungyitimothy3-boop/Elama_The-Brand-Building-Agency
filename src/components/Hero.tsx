@@ -17,10 +17,10 @@ const Hero = () => {
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <div className="inline-block mb-6 px-4 py-1.5 rounded-full glass text-xs text-muted-foreground tracking-widest uppercase">
-          Brand Building Agency
+          An Expert Branding Agency
         </div>
 
-        <h3 className="text-3xl sm:text-6xl font-bold leading-[0.95] tracking-tight mb-8 font-sans lg:text-9xl md:text-9xl">
+        <h3 className="text-3xl sm:text-6xl font-bold leading-[0.95] tracking-tight mb-8 font-sans lg:text-9xl md:text-5xl">
           Building Brands with 
           <br />
           <span className="gradient-text font-sans text-7xl">Timeless market relevance.</span>

@@ -44,7 +44,7 @@ const categories = [
     images: [print1, print2, print3],
   },
   {
-    title: "Document Design",
+    title: "Book Design",
     subtitle: "PDFs, Books, Brochures & Magazines",
     images: [document1, document2, document3],
   },

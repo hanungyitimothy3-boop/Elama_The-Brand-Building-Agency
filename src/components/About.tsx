@@ -10,16 +10,18 @@ const About = () => {
               <span className="gradient-text font-sans text-7xl">Attract the right Audience</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Elämä is a premium brand building agency focused on creating memorable identities for startups, founders, and innovative businesses. We combine strategic thinking with world-class design to build brands that stand out.
+              Elämä is a premium brand-building agency dedicated to shaping distinctive identities for startups, founders, and forward-thinking businesses—brands that connect with the right audience.
+              <br /><br />
+              We merge strategic thinking with world-class design to create work that stands apart in crowded markets and holds its relevance over time.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our approach is minimal, intentional, and always forward-thinking. Every pixel, every color, every word — designed with purpose.
+              Our approach is minimal, deliberate, and future-focused. Every pixel, every color, every word is intentional—because how your brand is perceived is never accidental.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             {[
-              { number: "10+", label: "Brands Built" },
+              { number: "20+", label: "Clients Worldwide" },
               { number: "98%", label: "Client Satisfaction" },
               { number: "4+", label: "Years Experience" },
               { number: "12", label: "Team Members" },
