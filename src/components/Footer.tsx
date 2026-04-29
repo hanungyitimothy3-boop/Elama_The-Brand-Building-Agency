@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { services } from "@/lib/services";
 
 const Footer = () => {
   return (
@@ -15,9 +16,11 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-sm mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#services" className="hover:text-foreground transition-colors">Brand Identity</a></li>
-              <li><a href="#services" className="hover:text-foreground transition-colors">Social Media Design</a></li>
-              <li><a href="#services" className="hover:text-foreground transition-colors">Product Packaging</a></li>
+              {services.map((s) => (
+                <li key={s.title}>
+                  <a href="#services" className="hover:text-foreground transition-colors">{s.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
