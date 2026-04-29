@@ -20,10 +20,10 @@ const Hero = () => {
           Brand Building Agency
         </div>
 
-        <h3 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold leading-[0.95] tracking-tight mb-8">
+        <h3 className="text-3xl sm:text-6xl font-bold leading-[0.95] tracking-tight mb-8 font-sans lg:text-9xl md:text-9xl">
           Building Brands with 
           <br />
-          <span className="gradient-text font-sans">Timeless market relevance.</span>
+          <span className="gradient-text font-sans text-7xl">Timeless market relevance.</span>
         </h3>
 
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
