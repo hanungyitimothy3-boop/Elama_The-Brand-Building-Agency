@@ -1,11 +1,14 @@
 import { useState, FormEvent } from "react";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
+import { useSearchParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { services as serviceList } from "@/lib/services";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
+  const [searchParams] = useSearchParams();
+  const presetService = searchParams.get("service") ?? "";
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -83,6 +86,7 @@ const Contact = () => {
             <select
               name="service"
               required
+              defaultValue={presetService}
               className="w-full px-4 py-3 rounded-xl bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all"
             >
               <option value="">Select a service</option>
