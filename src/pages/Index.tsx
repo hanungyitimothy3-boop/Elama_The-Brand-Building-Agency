@@ -5,6 +5,7 @@ import MockupCarousel from "@/components/MockupCarousel";
 import About from "@/components/About";
 import VisionMission from "@/components/VisionMission";
 import CoreValues from "@/components/CoreValues";
+import Founder from "@/components/Founder";
 import CTASection from "@/components/CTASection";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
       <About />
       <VisionMission />
       <CoreValues />
+      <Founder />
       <CTASection />
     </Layout>
   );
