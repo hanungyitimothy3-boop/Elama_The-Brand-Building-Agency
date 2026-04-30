@@ -51,10 +51,10 @@ function XIcon({ size = 20, className = "" }: { size?: number; className?: strin
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border mt-16 md:mt-24">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-10 md:py-12 flex flex-col items-center gap-6">
+    <footer className="border-t border-border/40 mt-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 flex flex-col items-center gap-8">
         <nav aria-label="Contact and social links">
-          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-x-8">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-10">
             {socials.map(({ label, href, icon: Icon, external }) => (
               <li key={label}>
                 <a
@@ -64,7 +64,7 @@ const Footer = () => {
                   {...(external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="inline-flex items-center justify-center w-10 h-10 text-muted-foreground hover:text-foreground transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center justify-center w-11 h-11 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95"
                 >
                   <Icon size={20} />
                 </a>
@@ -73,7 +73,7 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+        <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
           © 2026 Elämä — Crafted with intention
         </p>
       </div>

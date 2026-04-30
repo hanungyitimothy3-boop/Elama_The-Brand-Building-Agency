@@ -5,87 +5,48 @@
 @tailwind utilities;
 
 @layer base {
-  /* Light mode (default) */
   :root {
-    --background: 0 0% 100%;          /* #FFFFFF */
-    --foreground: 0 0% 4%;            /* #0A0A0A */
+    --background: 220 20% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 97%;                 /* #F8F8F8 */
-    --card-foreground: 0 0% 4%;
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Accent: keep teal as Elämä brand accent */
-    --primary: 178 100% 30%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 178 100% 33%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 4%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 42%;     /* #6B6B6B */
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 178 100% 30%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 178 100% 33%;
+    --accent-foreground: 220 20% 4%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 92%;               /* #EAEAEA */
-    --input: 0 0% 92%;
-    --ring: 178 100% 30%;
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 178 100% 33%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 4%;
-    --sidebar-primary: 178 100% 30%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 97%;
-    --sidebar-accent-foreground: 0 0% 4%;
-    --sidebar-border: 0 0% 92%;
-    --sidebar-ring: 178 100% 30%;
-  }
+    --sidebar-background: 220 15% 6%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 178 100% 33%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 178 100% 33%;
 
-  /* Dark mode */
-  .dark {
-    --background: 0 0% 4%;            /* #0B0B0B */
-    --foreground: 0 0% 96%;           /* #F5F5F5 */
-
-    --card: 0 0% 8%;                  /* #151515 */
-    --card-foreground: 0 0% 96%;
-
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 96%;
-
-    --primary: 178 100% 38%;
-    --primary-foreground: 0 0% 4%;
-
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 96%;
-
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 63%;     /* #A1A1A1 */
-
-    --accent: 178 100% 38%;
-    --accent-foreground: 0 0% 4%;
-
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 96%;
-
-    --border: 0 0% 16%;               /* #2A2A2A */
-    --input: 0 0% 16%;
-    --ring: 178 100% 38%;
-
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 178 100% 38%;
-    --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 0 0% 16%;
-    --sidebar-ring: 178 100% 38%;
+    --glass-bg: 220 15% 8% / 0.6;
+    --glow-primary: 178 100% 33%;
   }
 }
 
@@ -96,8 +57,6 @@
 
   body {
     @apply bg-background text-foreground font-body antialiased;
-    font-size: 16px;
-    line-height: 1.6;
   }
 
   html {
@@ -106,36 +65,28 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
   }
-
-  h1 { font-size: clamp(2rem, 4vw + 1rem, 3.5rem); }   /* 32 → 56 */
-  h2 { font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.25rem); } /* 24 → 36 */
-  h3 { font-size: clamp(1.125rem, 1vw + 0.75rem, 1.5rem); } /* 18 → 24 */
-
-  p { line-height: 1.6; }
 }
 
 @layer components {
   .glass {
-    @apply bg-card border border-border;
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
   }
 
   .glass-strong {
-    @apply bg-background/90 backdrop-blur-xl border-b border-border;
+    @apply bg-card/80 backdrop-blur-2xl border border-border/60;
   }
 
   .glow-accent {
-    box-shadow: 0 0 40px -12px hsl(var(--primary) / 0.25);
+    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.3);
   }
 
   .glow-accent-sm {
-    box-shadow: 0 0 16px -6px hsl(var(--primary) / 0.18);
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.2);
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[hsl(172_60%_45%)] to-[hsl(180_55%_45%)];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[hsl(172_50%_65%)] to-[hsl(180_55%_55%)];
   }
 
   .gradient-border {
@@ -143,28 +94,24 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24 px-6 md:px-12 lg:px-20;
-  }
-
-  .container-narrow {
-    @apply max-w-[1200px] mx-auto;
+    @apply py-24 md:py-32 px-6 md:px-12 lg:px-20;
   }
 
   .fade-in-up {
-    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fadeInUp 0.6s ease-out forwards;
     opacity: 0;
   }
 
-  .fade-in-up-delay-1 { animation-delay: 0.08s; }
-  .fade-in-up-delay-2 { animation-delay: 0.16s; }
-  .fade-in-up-delay-3 { animation-delay: 0.24s; }
-  .fade-in-up-delay-4 { animation-delay: 0.32s; }
+  .fade-in-up-delay-1 { animation-delay: 0.1s; }
+  .fade-in-up-delay-2 { animation-delay: 0.2s; }
+  .fade-in-up-delay-3 { animation-delay: 0.3s; }
+  .fade-in-up-delay-4 { animation-delay: 0.4s; }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -174,10 +121,15 @@
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 16px -6px hsl(var(--primary) / 0.25); }
-  50% { box-shadow: 0 0 32px -6px hsl(var(--primary) / 0.4); }
+  0%, 100% { box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 40px -5px hsl(var(--primary) / 0.5); }
 }

@@ -33,17 +33,17 @@ const Hero = () => {
           At Elämä, design isn’t just about visuals—it’s about communication. Every brand identity, logo, or social media piece we create is built to express your vision clearly and effectively.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             to="/book"
-            className="group px-5 py-3 rounded-md bg-foreground text-background font-medium text-sm flex items-center gap-2 transition-opacity duration-200 hover:opacity-90"
+            className="group px-8 py-4 rounded-xl bg-primary text-primary-foreground font-medium text-base flex items-center gap-2 transition-all duration-300 hover:gap-3 animate-pulse-glow"
           >
             Start Your Project
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
             to="/portfolio"
-            className="px-5 py-3 rounded-md border border-border text-foreground font-medium text-sm transition-colors duration-200 hover:bg-card"
+            className="px-8 py-4 rounded-xl glass text-foreground font-medium text-base transition-all duration-300 hover:bg-card/80"
           >
             View Our Work
           </Link>
