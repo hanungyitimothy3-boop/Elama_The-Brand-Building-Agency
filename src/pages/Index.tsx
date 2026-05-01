@@ -15,13 +15,13 @@ const Index = () => {
     <Layout>
       <Hero />
       <BrandPositioning />
-      <MockupCarousel />
       <About />
+      <Metrics />
       <VisionMission />
       <CoreValues />
       <Founder />
-      <Metrics />
       <BrandReinforcement />
+      <MockupCarousel />
       <CTASection />
     </Layout>
   );

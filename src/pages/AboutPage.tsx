@@ -4,6 +4,7 @@ import About from "@/components/About";
 import VisionMission from "@/components/VisionMission";
 import CoreValues from "@/components/CoreValues";
 import Testimonials from "@/components/Testimonials";
+import Metrics from "@/components/Metrics";
 import CTASection from "@/components/CTASection";
 
 const AboutPage = () => {
@@ -11,13 +12,13 @@ const AboutPage = () => {
     <Layout>
       <PageHeader
         eyebrow="About Elämä"
-        title="A studio for brands with"
+        title="Built with"
         highlight="real intention."
-        description="A community of marketers and strategists helping brands find their voice and earn meaningful visibility."
       />
       <About />
       <VisionMission />
       <CoreValues />
+      <Metrics />
       <Testimonials />
       <CTASection />
     </Layout>
