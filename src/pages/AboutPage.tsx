@@ -4,6 +4,7 @@ import About from "@/components/About";
 import VisionMission from "@/components/VisionMission";
 import CoreValues from "@/components/CoreValues";
 import Testimonials from "@/components/Testimonials";
+import Metrics from "@/components/Metrics";
 import CTASection from "@/components/CTASection";
 
 const AboutPage = () => {
