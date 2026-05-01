@@ -11,13 +11,13 @@ const AboutPage = () => {
     <Layout>
       <PageHeader
         eyebrow="About Elämä"
-        title="A studio for brands with"
+        title="Built with"
         highlight="real intention."
-        description="A community of marketers and strategists helping brands find their voice and earn meaningful visibility."
       />
       <About />
       <VisionMission />
       <CoreValues />
+      <Metrics />
       <Testimonials />
       <CTASection />
     </Layout>
