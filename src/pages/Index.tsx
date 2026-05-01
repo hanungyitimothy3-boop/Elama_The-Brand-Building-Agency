@@ -6,6 +6,8 @@ import About from "@/components/About";
 import VisionMission from "@/components/VisionMission";
 import CoreValues from "@/components/CoreValues";
 import Founder from "@/components/Founder";
+import Metrics from "@/components/Metrics";
+import BrandReinforcement from "@/components/BrandReinforcement";
 import CTASection from "@/components/CTASection";
 
 const Index = () => {
@@ -18,6 +20,8 @@ const Index = () => {
       <VisionMission />
       <CoreValues />
       <Founder />
+      <Metrics />
+      <BrandReinforcement />
       <CTASection />
     </Layout>
   );
